@@ -10,11 +10,18 @@ const cookieParser = require('cookie-parser');
 // express 설정 1
 const app = express();
 
+const port = 3000 
+const con = mysql.createConnection({
+    host: 'localhost',
+    user: 'supermom',
+    password: 'supermom1234!'
+}); 
+
 // db 연결 2
 const client = mysql.createConnection({
-    user : 'root',
-    password : '비밀번호 설정하세요!각자!',
-    database : 'pro'
+    user : 'supermom',
+    password : 'supermom1234!',
+    database : 'superdb'
 });
 
 // 정적 파일 설정 (미들웨어) 3
